@@ -1,12 +1,10 @@
 build:
-  type: dockerfile
-  config:
-    dockerfile: ./Dockerfile
+  type: nixpacks
 
 deploy:
   replicas: 1
   resources:
-    cpu: 0.1
+    cpu: 0.2
     memory: 256
   volumes:
     - mountPath: /app/data

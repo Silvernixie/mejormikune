@@ -1,0 +1,15 @@
+[phases.setup]
+aptPkgs = ["ffmpeg", "python3-pip", "python3-dev", "gcc", "build-essential"]
+
+[phases.install]
+cmds = [
+  "python3 -m pip install --upgrade pip",
+  "pip install --no-cache-dir -r requirements.txt"
+]
+
+[start]
+cmd = "python3 main.py"
+
+[variables]
+PYTHONDONTWRITEBYTECODE = "1"
+PYTHONUNBUFFERED = "1"
