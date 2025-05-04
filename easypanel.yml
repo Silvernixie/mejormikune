@@ -1,7 +1,7 @@
 build:
   type: dockerfile
   config:
-    dockerfile: Dockerfile
+    dockerfile: ./Dockerfile
 
 deploy:
   replicas: 1
