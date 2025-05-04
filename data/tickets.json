@@ -1,0 +1,43 @@
+{
+    "settings": {
+        "1338549728916275201": {
+            "ticket_channel_id": null,
+            "support_role_id": null,
+            "admin_role_id": null,
+            "transcript_channel_id": null,
+            "enabled_categories": [
+                "general",
+                "technical",
+                "report"
+            ],
+            "ticket_prefix": "ticket",
+            "auto_close_inactive": 24,
+            "auto_archive": true
+        }
+    },
+    "tickets": {},
+    "user_tickets": {},
+    "categories": {
+        "general": {
+            "name": "Soporte General",
+            "description": "Ayuda con cualquier consulta general",
+            "color": "blue",
+            "emoji": "❓"
+        },
+        "technical": {
+            "name": "Soporte Técnico",
+            "description": "Problemas técnicos con el bot o el servidor",
+            "color": "red",
+            "emoji": "🔧"
+        },
+        "report": {
+            "name": "Reportes",
+            "description": "Reportar usuarios o comportamientos",
+            "color": "orange",
+            "emoji": "🚨"
+        }
+    },
+    "counters": {
+        "1338549728916275201": 1
+    }
+}

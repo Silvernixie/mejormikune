@@ -1,0 +1,258 @@
+{
+  "general": [
+    {
+      "question": "¿Cuál es el río más largo del mundo?",
+      "options": [
+        "Amazonas",
+        "Nilo",
+        "Misisipi",
+        "Yangtsé"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "¿Cuál es el elemento químico más abundante en la corteza terrestre?",
+      "options": [
+        "Hierro",
+        "Silicio",
+        "Oxígeno",
+        "Aluminio"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
+      "options": [
+        "Miguel de Cervantes",
+        "Federico García Lorca",
+        "Gabriel García Márquez",
+        "Pablo Neruda"
+      ],
+      "answer": 0
+    }
+  ],
+  "ciencia": [
+    {
+      "question": "¿Cuál es el hueso más largo del cuerpo humano?",
+      "options": [
+        "Húmero",
+        "Fémur",
+        "Tibia",
+        "Radio"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "¿Cuál es la velocidad de la luz?",
+      "options": [
+        "300,000 km/s",
+        "150,000 km/s",
+        "200,000 km/s",
+        "250,000 km/s"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "¿Cuál es el planeta más grande del Sistema Solar?",
+      "options": [
+        "Tierra",
+        "Júpiter",
+        "Saturno",
+        "Neptuno"
+      ],
+      "answer": 1
+    }
+  ],
+  "historia": [
+    {
+      "question": "¿En qué año comenzó la Primera Guerra Mundial?",
+      "options": [
+        "1914",
+        "1916",
+        "1918",
+        "1920"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "¿Quién fue el primer emperador romano?",
+      "options": [
+        "Julio César",
+        "Augusto",
+        "Nerón",
+        "Marco Aurelio"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "¿En qué año llegó Cristóbal Colón a América?",
+      "options": [
+        "1492",
+        "1498",
+        "1500",
+        "1510"
+      ],
+      "answer": 0
+    }
+  ],
+  "geografia": [
+    {
+      "question": "¿Cuál es el país más grande del mundo por territorio?",
+      "options": [
+        "China",
+        "Estados Unidos",
+        "Canadá",
+        "Rusia"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "¿Cuál es la capital de Australia?",
+      "options": [
+        "Sídney",
+        "Melbourne",
+        "Canberra",
+        "Brisbane"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "¿Cuántos continentes hay en el mundo?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": 2
+    }
+  ],
+  "entretenimiento": [
+    {
+      "question": "¿Qué actor interpretó a Tony Stark / Iron Man en el UCM?",
+      "options": [
+        "Chris Evans",
+        "Chris Hemsworth",
+        "Robert Downey Jr.",
+        "Mark Ruffalo"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "¿Cuál es la película más taquillera de la historia (sin ajustar por inflación)?",
+      "options": [
+        "Avatar",
+        "Avengers: Endgame",
+        "Titanic",
+        "Star Wars: El despertar de la fuerza"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "¿Qué banda lanzó el álbum 'The Dark Side of the Moon'?",
+      "options": [
+        "The Beatles",
+        "Led Zeppelin",
+        "Pink Floyd",
+        "Queen"
+      ],
+      "answer": 2
+    }
+  ],
+  "deportes": [
+    {
+      "question": "¿Cuántos jugadores hay en un equipo de baloncesto en la cancha?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "¿Qué país ha ganado más Copas Mundiales de Fútbol?",
+      "options": [
+        "Alemania",
+        "Italia",
+        "Argentina",
+        "Brasil"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "¿Cuántos aros tiene la bandera olímpica?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": 1
+    }
+  ],
+  "videojuegos": [
+    {
+      "question": "¿Quién es el protagonista de la saga 'The Legend of Zelda'?",
+      "options": [
+        "Zelda",
+        "Link",
+        "Ganondorf",
+        "Mario"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "¿En qué año se lanzó Minecraft?",
+      "options": [
+        "2009",
+        "2010",
+        "2011",
+        "2012"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "¿Qué compañía desarrolló el juego 'Overwatch'?",
+      "options": [
+        "Valve",
+        "Epic Games",
+        "Blizzard",
+        "Riot Games"
+      ],
+      "answer": 2
+    }
+  ],
+  "anime": [
+    {
+      "question": "¿Quién es el protagonista de 'Naruto'?",
+      "options": [
+        "Sasuke Uchiha",
+        "Naruto Uzumaki",
+        "Kakashi Hatake",
+        "Sakura Haruno"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "¿Cuál es el anime más largo en emisión?",
+      "options": [
+        "One Piece",
+        "Naruto",
+        "Dragon Ball",
+        "Detective Conan"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "¿Qué estudio animó 'Kimetsu no Yaiba' (Demon Slayer)?",
+      "options": [
+        "MAPPA",
+        "Ufotable",
+        "Kyoto Animation",
+        "Bones"
+      ],
+      "answer": 1
+    }
+  ]
+}

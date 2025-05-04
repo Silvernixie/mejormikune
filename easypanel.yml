@@ -1,0 +1,18 @@
+build:
+  type: nixpacks
+  config:
+    provider: python
+
+deploy:
+  replicas: 1
+  resources:
+    cpu: 0.1
+    memory: 128
+  volumes:
+    - mountPath: /app/data
+      name: mikune-data
+  env:
+    - name: PYTHONDONTWRITEBYTECODE
+      value: "1"
+    - name: PYTHONUNBUFFERED
+      value: "1"

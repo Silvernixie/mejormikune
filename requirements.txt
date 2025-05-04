@@ -1,0 +1,30 @@
+# Core dependencies
+discord.py>=2.0.0
+python-dotenv
+aiohttp
+pytz
+
+# Extension-specific dependencies
+animec
+beautifulsoup4
+googlesearch-python
+jishaku
+
+# Voice support
+PyNaCl>=1.4.0
+yt-dlp>=2023.3.4
+async-timeout>=4.0.2
+ffmpeg-python>=0.2.0
+
+# Utility packages
+pillow>=9.0.0
+wavelink
+spotipy
+psutil
+motor
+dnspython
+pyyaml>=6.0
+praw>=7.5.0
+googletrans>=3.1.0a0
+colorlog>=6.6.0
+requests>=2.26.0

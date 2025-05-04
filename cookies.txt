@@ -1,0 +1,6 @@
+# Netscape HTTP Cookie File
+# Este es un archivo de cookies simplificado para YouTube
+# Lo importante es tener al menos una cookie para que yt-dlp no use el modo anónimo completo
+.youtube.com	TRUE	/	TRUE	1798691497	GPS	1
+.youtube.com	TRUE	/	TRUE	1798691497	VISITOR_INFO1_LIVE	YouTube-Bot
+.youtube.com	TRUE	/	TRUE	1798691497	YSC	YouTube-Session

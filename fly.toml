@@ -1,0 +1,10 @@
+app = "mikune-bot"
+primary_region = "auto"
+
+[build]
+builder = "dockerfile"
+dockerfile = "Dockerfile"
+disable_nixpacks = true
+
+[deploy]
+strategy = "docker"

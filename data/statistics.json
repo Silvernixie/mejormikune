@@ -1,0 +1,225 @@
+{
+    "guilds": {
+        "1338549728916275201": {
+            "messages": 23,
+            "commands": 25,
+            "joins": 0,
+            "leaves": 0,
+            "voice_time": 0,
+            "channels": {
+                "1342656090323550258": {
+                    "messages": 22,
+                    "users": {
+                        "1317469211596947547": 22
+                    }
+                },
+                "1339318255692546151": {
+                    "messages": 1,
+                    "users": {
+                        "895353732403953746": 1
+                    }
+                }
+            },
+            "members": {
+                "1317469211596947547": {
+                    "messages": 22,
+                    "commands": 25,
+                    "voice_time": 0
+                },
+                "895353732403953746": {
+                    "messages": 1,
+                    "commands": 0,
+                    "voice_time": 0
+                }
+            },
+            "hourly_activity": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 17,
+                "13": 6,
+                "14": 0,
+                "15": 0,
+                "16": 0,
+                "17": 0,
+                "18": 0,
+                "19": 0,
+                "20": 0,
+                "21": 0,
+                "22": 0,
+                "23": 0
+            },
+            "commands_used": {
+                "ticket": 1,
+                "ticket help": 1,
+                "ticket setup": 1,
+                "ticket panel": 1,
+                "ticket create": 1,
+                "ticket close": 2,
+                "dailystats": 1,
+                "poll": 3,
+                "load": 2,
+                "afk": 4,
+                "afk theme": 4,
+                "afk set": 4
+            },
+            "first_seen": 1746273486.623406
+        }
+    },
+    "users": {
+        "1317469211596947547": {
+            "messages": 22,
+            "commands": 25,
+            "voice_time": 0,
+            "reactions_added": 1,
+            "reactions_received": 0,
+            "guilds": {
+                "1338549728916275201": {
+                    "messages": 22,
+                    "commands": 25,
+                    "voice_time": 0
+                }
+            },
+            "first_seen": 1746273486.623421,
+            "last_seen": 1746357622.329815,
+            "last_message": {
+                "content": ">>help",
+                "timestamp": 1746357622.329292,
+                "channel_id": "1342656090323550258",
+                "guild_id": "1338549728916275201"
+            }
+        },
+        "895353732403953746": {
+            "messages": 1,
+            "commands": 0,
+            "voice_time": 0,
+            "reactions_added": 0,
+            "reactions_received": 0,
+            "guilds": {
+                "1338549728916275201": {
+                    "messages": 1,
+                    "commands": 0,
+                    "voice_time": 0
+                }
+            },
+            "first_seen": 1746357174.631751,
+            "last_seen": 1746357174.631754,
+            "last_message": {
+                "content": "Hola",
+                "timestamp": 1746357174.631756,
+                "channel_id": "1339318255692546151",
+                "guild_id": "1338549728916275201"
+            }
+        }
+    },
+    "channels": {
+        "1342656090323550258": {
+            "messages": 22,
+            "commands": 0,
+            "users": {
+                "1317469211596947547": 22
+            },
+            "hourly_activity": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 17,
+                "13": 5,
+                "14": 0,
+                "15": 0,
+                "16": 0,
+                "17": 0,
+                "18": 0,
+                "19": 0,
+                "20": 0,
+                "21": 0,
+                "22": 0,
+                "23": 0
+            },
+            "first_message": 1746273486.623416,
+            "last_message": 1746357622.329287
+        },
+        "1339318255692546151": {
+            "messages": 1,
+            "commands": 0,
+            "users": {
+                "895353732403953746": 1
+            },
+            "hourly_activity": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0,
+                "13": 1,
+                "14": 0,
+                "15": 0,
+                "16": 0,
+                "17": 0,
+                "18": 0,
+                "19": 0,
+                "20": 0,
+                "21": 0,
+                "22": 0,
+                "23": 0
+            },
+            "first_message": 1746357174.631743,
+            "last_message": 1746357174.631747
+        }
+    },
+    "global": {
+        "start_date": 1746273479.646145,
+        "total_messages": 23,
+        "commands_used": 25,
+        "users_joined": 0,
+        "users_left": 0,
+        "voice_minutes": 0
+    },
+    "daily": {
+        "2025-05-03": {
+            "messages": 3,
+            "commands": 8,
+            "joins": 0,
+            "leaves": 0,
+            "voice_time": 0,
+            "active_users": 0,
+            "reactions": 0
+        },
+        "2025-05-04": {
+            "messages": 20,
+            "commands": 17,
+            "joins": 0,
+            "leaves": 0,
+            "voice_time": 0,
+            "active_users": 0,
+            "reactions": 1
+        }
+    },
+    "voice_sessions": {}
+}

@@ -1,0 +1,51 @@
+{
+  "1317469211596947547": {
+    "balance": 398,
+    "bank": 351,
+    "last_daily": null,
+    "inventory": {},
+    "farm": {
+      "plots": 0,
+      "crops": {},
+      "last_watered": null
+    },
+    "stats": {
+      "worked": 2,
+      "commands_used": 0,
+      "gambles_won": 0,
+      "gambles_lost": 0,
+      "stolen": 0,
+      "stolen_from": 0,
+      "crimes_succeeded": 0,
+      "crimes_failed": 0,
+      "jobs_completed": 2
+    },
+    "pets": {},
+    "level": 1,
+    "xp": 19,
+    "job": null,
+    "streak": {
+      "daily": 0,
+      "last_claim": null
+    },
+    "perks": {},
+    "last_rob": null,
+    "last_crime": null,
+    "last_adventure": null,
+    "last_fish": null,
+    "last_hunt": null,
+    "last_weekly": null,
+    "last_monthly": null,
+    "last_interest": "2025-05-02T23:08:45.707040",
+    "properties": {},
+    "loans": [],
+    "job_skills": {},
+    "business": null,
+    "last_property_collection": {},
+    "last_job": {
+      "streamer": "2025-05-03T09:44:08.000027",
+      "barista": "2025-05-03T09:44:35.501527"
+    },
+    "job_streak": 2
+  }
+}
