@@ -7,9 +7,9 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1 
 ENV PYTHONUNBUFFERED=1
 
-# Instalar solo las dependencias mínimas necesarias
+# Instalar solo las dependencias mínimas necesarias (ffmpeg para música)
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends gcc && \
+    apt-get install -y --no-install-recommends gcc ffmpeg && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -22,10 +22,10 @@ RUN pip install --no-cache-dir -r requirements.txt && \
     apt-get purge -y gcc && \
     apt-get autoremove -y
 
-# Copiar solo los archivos esenciales
+# Copiar solo los archivos necesarios
 COPY main.py extension_handler.py ./
-COPY cogs/*.py ./cogs/
-COPY utils/*.py ./utils/
+COPY cogs/ ./cogs/
+COPY utils/ ./utils/
 
 # Crear carpetas necesarias para datos
 RUN mkdir -p data/ticket_archives

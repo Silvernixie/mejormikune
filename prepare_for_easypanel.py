@@ -1,32 +1,86 @@
 #!/usr/bin/env python3
 """
-Script de preparación para deploy a Easypanel con Nixpacks
-Este script prepara el proyecto Mikune para ser desplegado en Easypanel,
-ejecutando automáticamente todas las tareas de limpieza necesarias.
+Script de preparación para deploy a Easypanel
+Este script elimina todos los archivos relacionados con Nixpacks 
+y prepara el proyecto para un deploy limpio usando Dockerfile.
 """
 
 import os
+import shutil
 import sys
-import subprocess
-import importlib.util
 
-def importar_script(ruta_script):
-    """Importa un script Python como módulo"""
-    nombre_modulo = os.path.basename(ruta_script).replace('.py', '')
-    spec = importlib.util.spec_from_file_location(nombre_modulo, ruta_script)
-    modulo = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(modulo)
-    return modulo
+def limpiar_nixpacks():
+    """Elimina todos los archivos y carpetas relacionadas con Nixpacks"""
+    elementos_borrados = 0
+    
+    # Borrar carpeta .nixpacks si existe
+    if os.path.exists('.nixpacks') and os.path.isdir('.nixpacks'):
+        shutil.rmtree('.nixpacks')
+        elementos_borrados += 1
+        print("✓ Eliminada carpeta .nixpacks")
+    
+    # Borrar archivos relacionados con Nixpacks
+    archivos_nixpacks = [
+        'nixpacks.toml',
+        '.nixpacksignore'
+    ]
+    
+    for archivo in archivos_nixpacks:
+        if os.path.exists(archivo):
+            os.remove(archivo)
+            elementos_borrados += 1
+            print(f"✓ Eliminado archivo: {archivo}")
+    
+    # Buscar recursivamente cualquier carpeta .nixpacks en subcarpetas
+    for raiz, dirs, _ in os.walk('.'):
+        if '.nixpacks' in dirs:
+            ruta_nixpacks = os.path.join(raiz, '.nixpacks')
+            shutil.rmtree(ruta_nixpacks)
+            elementos_borrados += 1
+            print(f"✓ Eliminada carpeta: {ruta_nixpacks}")
+    
+    return elementos_borrados
+
+def limpiar_cache_y_temp():
+    """Elimina archivos de caché y temporales"""
+    elementos_borrados = 0
+    
+    # Eliminar directorio __pycache__
+    for raiz, dirs, _ in os.walk('.'):
+        if '__pycache__' in dirs:
+            ruta_pycache = os.path.join(raiz, '__pycache__')
+            shutil.rmtree(ruta_pycache)
+            elementos_borrados += 1
+            print(f"✓ Eliminada carpeta: {ruta_pycache}")
+    
+    # Eliminar archivos .pyc, .pyo
+    for raiz, _, archivos in os.walk('.'):
+        for archivo in archivos:
+            if archivo.endswith(('.pyc', '.pyo', '.pyd')):
+                ruta_archivo = os.path.join(raiz, archivo)
+                os.remove(ruta_archivo)
+                elementos_borrados += 1
+                print(f"✓ Eliminado archivo: {ruta_archivo}")
+    
+    # Eliminar archivos de log
+    for raiz, _, archivos in os.walk('.'):
+        for archivo in archivos:
+            if archivo.endswith('.log'):
+                ruta_archivo = os.path.join(raiz, archivo)
+                os.remove(ruta_archivo)
+                elementos_borrados += 1
+                print(f"✓ Eliminado archivo de log: {ruta_archivo}")
+    
+    return elementos_borrados
 
 def crear_dockerignore():
-    """Crea un archivo .dockerignore optimizado para Easypanel"""
-    contenido = """# Python
+    """Crea un archivo .dockerignore optimizado"""
+    contenido = """# Directorios y archivos que no necesitamos en el contenedor
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -42,28 +96,33 @@ var/
 .installed.cfg
 *.egg
 
-# Logs y datos temporales
+# Archivos de log
 *.log
 logs/
-*.tmp
+
+# Archivos de entorno local que no deberían ir al contenedor
+.env
 .env.local
 .env.development
 
-# Desarrollo
+# Archivos de control de versiones y configuración
 .git
 .github
 .gitignore
 .vscode
 .idea
 
-# Archivos específicos que no necesitamos en producción
-debug_build.sh
-install_dependencies.bat
-install_dependencies.py
-install_dependencies.sh
+# Scripts de mantenimiento que no necesitamos en producción
+*.sh
+*.bat
 clean_for_deploy.py
 remove_nixpacks.py
 prepare_for_easypanel.py
+install_dependencies.py
+
+# Archivos específicos de Nix/Nixpacks
+.nixpacks/
+nixpacks.toml
 """
     
     try:
@@ -76,35 +135,30 @@ prepare_for_easypanel.py
         return False
 
 def main():
-    """Función principal que orquesta todas las operaciones de preparación"""
+    """Función principal"""
     print("=== PREPARACIÓN PARA DEPLOY A EASYPANEL ===")
     
-    # 1. Ejecutar script de limpieza general
-    print("\n[1/3] Ejecutando limpieza de archivos...")
-    try:
-        clean_script = importar_script('clean_for_deploy.py')
-        clean_script.main()
-    except Exception as e:
-        print(f"Error durante la limpieza: {e}")
+    # Limpieza de Nixpacks
+    print("\n[1/3] Eliminando archivos de Nixpacks...")
+    total_nixpacks = limpiar_nixpacks()
     
-    # 2. Asegurar la eliminación de Nixpacks antiguo
-    print("\n[2/3] Eliminando configuraciones antiguas de Nixpacks...")
-    try:
-        nixpacks_script = importar_script('remove_nixpacks.py')
-        nixpacks_script.main()
-    except Exception as e:
-        print(f"Error durante la eliminación de Nixpacks: {e}")
+    # Limpieza de caché y temporales
+    print("\n[2/3] Eliminando archivos de caché y temporales...")
+    total_cache = limpiar_cache_y_temp()
     
-    # 3. Crear archivos optimizados para Easypanel
-    print("\n[3/3] Optimizando configuración para Easypanel...")
+    # Crear .dockerignore
+    print("\n[3/3] Creando archivo .dockerignore optimizado...")
     crear_dockerignore()
     
-    print("\n=== PREPARACIÓN COMPLETADA ===")
-    print("Tu proyecto está listo para ser desplegado en Easypanel usando Nixpacks.")
+    # Resumen
+    print(f"\n=== LIMPIEZA COMPLETADA ===")
+    print(f"Se eliminaron {total_nixpacks} elementos relacionados con Nixpacks")
+    print(f"Se eliminaron {total_cache} archivos de caché y temporales")
+    print("\nAhora el proyecto está listo para ser desplegado en Easypanel usando Dockerfile.")
     print("Instrucciones de despliegue:")
-    print("1. Sube tu código a un repositorio Git")
+    print("1. Sube tu código limpio a un repositorio Git")
     print("2. En Easypanel, crea una nueva aplicación usando ese repositorio")
-    print("3. Asegúrate de que Easypanel detecte automáticamente la configuración de Nixpacks")
+    print("3. Asegúrate de que Easypanel use el Dockerfile que hemos configurado")
     
     return 0
 
